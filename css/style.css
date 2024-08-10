@@ -1,0 +1,813 @@
+:root {
+    --main-color: #0078FF;
+    --bg-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* Start NavBar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 12px 0;
+}
+
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown .ul-dropdown {
+    width: 180px;
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.navbar .dropdown .ul-dropdown li a {
+    color: black;
+    font-size: 14px;
+}
+
+.navbar .dropdown .ul-dropdown li:hover .shallo {
+    color: var(--main-color);
+}
+
+.navbar .deep-dropdown ul li:hover a {
+    color: var(--main-color);
+}
+
+.navbar .dropdown:hover .ul-dropdown {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+.navbar .deep-dropdown {
+    position: relative;
+}
+
+.navbar .deep-dropdown ul {
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    width: 180px;
+    transition: 0.3s;
+}
+
+.navbar .deep-dropdown:hover ul {
+   opacity: 1;
+   left: 100%;
+}
+
+.nav-link {
+    color: #fff;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-item {
+    margin-left: 10px;
+    
+}
+
+a.active  {
+    color: #fff !important;
+}
+
+.nav-item:hover .active {
+    color: var(--main-color) !important;
+}
+
+.nav-item:hover .link {
+    color: var(--main-color);
+}
+
+.dropdown {
+    position: relative;
+    margin-right: 20px;
+}
+
+.dropdown::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -10px;
+    top: 40%;
+}
+
+.deep-dropdown {
+    position: relative;
+    margin-right: 20px;
+}
+
+.deep-dropdown::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid black;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -10px;
+    top: 40%;
+}
+/* /////////////////////////////////// */
+.main-p {
+    position: relative;
+}
+
+.main-p::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    left: 40%;
+    bottom: -20px;
+    background-color: var(--main-color);
+}
+/* End NavBar */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Home */
+.home {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)) ,url(../images/hero-bg.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home p::after {
+    content: '|';
+    animation: typing 15s infinite;
+}
+
+/* Photographer */
+/* Freelancer */
+/* DEVELOPER */
+/* DESIGNER */
+@keyframes typing {
+    0% {
+        content: "|";
+    }
+
+    1% {
+        content: "D|";
+    }
+
+    2% {
+        content: "De|";
+    }
+
+    3% {
+        content: "Des|";
+    }
+
+    4% {
+        content: "Desi|";
+    }
+
+    5% {
+        content: "Desig|";
+    }
+
+    6% {
+        content: "Design|";
+    }
+
+    7% {
+        content: "Designe|";
+    }
+
+    8% {
+        content: "Designer|";
+    }
+
+    9% {
+        content: "Designer";
+    }
+
+    10% {
+        content: "Designer|";
+    }
+
+    11% {
+        content: "Designer";
+    }
+
+    12% {
+        content: "Designer|";
+    }
+    
+    13% {
+        content: "Designer";
+    }
+
+    14% {
+        content: "Designer|";
+    }
+
+    15% {
+        content: "Designe|";
+    }
+
+    16% {
+        content: "Design|";
+    }
+
+    17% {
+        content: "Desig|";
+    }
+
+    18% {
+        content: "Desi|";
+    }
+
+    19% {
+        content: "Des|";
+    }
+
+    20% {
+        content: "De|";
+    }
+
+    21% {
+        content: "Dev|";
+    }
+
+    22% {
+        content: "Deve|";
+    }
+
+    23% {
+        content: "Devel|";
+    }
+
+    24% {
+        content: "Develo|";
+    }
+
+    25% {
+        content: "Develop|";
+    }
+
+    26% {
+        content: "Develope|";
+    }
+
+    27% {
+        content: "Developer|";
+    }
+
+    28% {
+        content: "Developer";
+    }
+
+    29% {
+        content: "Developer|";
+    }
+
+    30% {
+        content: "Developer";
+    }
+
+    31% {
+        content: "Developer|";
+    }
+
+    32% {
+        content: "Developer";
+    }
+
+    33% {
+        content: "Developer|";
+    }
+
+    34% {
+        content: "Develope|";
+    }
+
+    35% {
+        content: "Develop|";
+    }
+
+    36% {
+        content: "Develo|";
+    }
+
+    37% {
+        content: "Devel|";
+    }
+
+    38% {
+        content: "Deve|";
+    }
+
+    39% {
+        content: "Dev|";
+    }
+
+    40% {
+        content: "De|";
+    }
+
+    41% {
+        content: "D|";
+    }
+
+    42% {
+        content: "|";
+    }
+
+    43% {
+        content: "F|";
+    }
+
+    44% {
+        content: "Fr|";
+    }
+
+    45% {
+        content: "Fre|";
+    }
+
+    46% {
+        content: "Free|";
+    }
+
+    47% {
+        content: "Freel|";
+    }
+
+    48% {
+        content: "Freela|";
+    }
+
+    49% {
+        content: "Freelan|";
+    }
+
+    50% {
+        content: "Freelanc|";
+    }
+
+    51% {
+        content: "Freelance|";
+    }
+
+    52% {
+        content: "Freelancer|";
+    }
+
+    53% {
+        content: "Freelancer";
+    }
+
+    54% {
+        content: "Freelancer|";
+    }
+
+    55% {
+        content: "Freelancer";
+    }
+
+    56% {
+        content: "Freelancer|";
+    }
+
+    57% {
+        content: "Freelancer";
+    }
+
+    58% {
+        content: "Freelancer|";
+    }
+
+    59% {
+        content: "Freelance|";
+    }
+
+    60% {
+        content: "Freelanc|";
+    }
+
+    61% {
+        content: "Freelan|";
+    }
+
+    62% {
+        content: "Freela|";
+    }
+
+    63% {
+        content: "Freel|";
+    }
+
+    64% {
+        content: "Free|";
+    }
+
+    65% {
+        content: "Fre|";
+    }
+
+    66% {
+        content: "Fr|";
+    }
+
+    67% {
+        content: "f|";
+    }
+
+    68% {
+        content: "|";
+    }
+
+    69% {
+        content: "P|";
+    }
+
+    70% {
+        content: "Ph|";
+    }
+
+    71% {
+        content: "Pho|";
+    }
+
+    72% {
+        content: "Phot|";
+    }
+
+    73% {
+        content: "Photo|";
+    }
+
+    74% {
+        content: "Photog|";
+    }
+
+    75% {
+        content: "Photogr|";
+    }
+
+    76% {
+        content: "Photogra|";
+    }
+
+    77% {
+        content: "Photograp|";
+    }
+
+    78% {
+        content: "Photograph|";
+    }
+
+    79% {
+        content: "Photographe|";
+    }
+
+    80% {
+        content: "Photographer|";
+    }
+
+    81% {
+        content: "Photographer";
+    }
+
+    82% {
+        content: "Photographer|";
+    }
+
+    83% {
+        content: "Photographer";
+    }
+
+    84% {
+        content: "Photographer|";
+    }
+
+    85% {
+        content: "Photographer";
+    }
+
+    86% {
+        content: "Photographer|";
+    }
+
+    87% {
+        content: "Photographe|";
+    }
+
+    88% {
+        content: "Photograph|";
+    }
+
+    89% {
+        content: "Photograp|";
+    }
+
+    90% {
+        content: "Photogra|";
+    }
+
+    91% {
+        content: "Photogr|";
+    }
+
+    92% {
+        content: "Photog|";
+    }
+
+    93% {
+        content: "Photo|";
+    }
+
+    94% {
+        content: "Phot|";
+    }
+
+    95% {
+        content: "Pho|";
+    }
+
+    96% {
+        content: "Ph|";
+    }
+
+    97% {
+        content: "P|";
+    }
+
+    98% {
+        content: "|";
+    }
+
+    99% {
+        content: "|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+/* End Home */
+/* //////////////////////////////////////////////////////////////// */
+/* Start About */
+.about {
+    background-color: var(--bg-color);
+}
+
+.about img {
+    width: 150px;
+}
+
+.about .progress {
+    height: 0.7rem;
+}
+
+.about h2 {
+    position: relative;
+}
+
+.about h2::after {
+    content:  "";
+    position: absolute;
+    width: 17%;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: -20px;
+}
+/* End About */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Services */
+.services {
+    background-color: var(--bg-color);
+}
+
+.services i {
+    font-size: 2rem;
+    padding: 30px;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 0 10px var(--main-color);
+}
+
+.services .card:hover i {
+    background-color: var(--main-color);
+    box-shadow: 0 0 0 10px #cde1f8;
+    transition: all 500ms ease;
+    color: #fff;
+}
+/* End Services */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Counter */
+.counter {
+    background-image: linear-gradient(var(--main-color), rgba(6,90,185, 0.5)) ,url(../images/counters-bg.jpg);
+    background-position: center;
+    background-size: cover;background-attachment: fixed;
+}
+
+.counter i {
+    font-size: 2rem;
+    padding: 20px;
+    border: 10px solid #CDE1F8;
+}
+/* End counter */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Portfolio */
+.portfolio {
+    background-color: var(--bg-color);
+}
+
+.portfolio .row span {
+    color: var(--main-color);
+}
+
+.portfolio .row img {
+    transition: 0.5s;
+}
+
+.portfolio .row img:hover {
+    transform: scale(1.2);
+}
+
+.portfolio .row .col-7 p {
+    font-size: 13px;
+}
+
+.portfolio .row .plus {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    position: relative;
+}
+
+.portfolio .row .plus::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .row .plus::before {
+    content: "";
+    width: 3px;
+    height: 60%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* End Portfolio */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Slider */
+.slider {
+    background-image: linear-gradient(var(--main-color), rgba(6,90,185, 0.5)) ,url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+}
+
+.slider img {
+    width: 150px;
+    transform: translatex(-50%);
+    left: 50%;
+}
+
+.slider .indicator button {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    margin: 0px 5px 40px;
+}
+/* End Slider */
+/* //////////////////////////////////////////////////////////////// */
+/* Start Blog */
+.blog .card {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.blog .row img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.blog .row .content h5 {
+    transition: 0.5s;
+}
+
+.blog .row .content h5:hover {
+    color: var(--main-color);
+}
+
+.blog .row .box {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+}
+
+.blog .row span {
+    font-size: 14px;
+}
+
+.blog .row .author {
+    transition: 0.3s;
+}
+
+.blog .row .author:hover {
+    color: var(--main-color);
+}
+/* End Blog */
+/* /////////////////////////////////////////////////////// */
+/* Start Contact */
+.contact {
+    background-image: linear-gradient(var(--main-color), rgba(6,90,185, 0.5)) ,url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 1px solid var(--main-color);
+}
+
+.contact i {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    
+}
+
+.contact .fa-brands {
+    border: 4px solid var(--main-color);
+    box-shadow: 0 0 0 2px var(--main-color);
+    color: black;
+    transition: 0.3s;
+    /* list-style: none; */
+    text-decoration: none;
+}
+
+.contact .fa-brands:hover {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    box-shadow: 0 0 0 8px #cde1f8;
+}
+
+.contact button {
+    box-shadow: 0 0 0 10px var(--main-color);
+}
+
+.contact button:hover {
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.contact h2 {
+    position: relative;
+}
+
+.contact h2::after {
+    content: "";
+    width: 18%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+}
+/* End Contact */
